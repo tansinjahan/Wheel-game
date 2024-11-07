@@ -1,6 +1,6 @@
 # Attribution
 
-This repository presents an app named wheel-of-names inspired from (https://github.com/mihailgaberov/Wheel-of-Names/tree/main?tab=readme-ov-file) 
+This repository presents an app named wheel-games inspired from (https://github.com/mihailgaberov/Wheel-of-Names/tree/main?tab=readme-ov-file) 
 
 # React + TypeScript + Vite
 
