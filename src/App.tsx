@@ -1,28 +1,27 @@
-import { useState } from 'react';
+import { Wheels } from './Wheels';
+import { Participants } from './Participants';
 import { Header } from './Header';
 import { Questions } from './Questions';
 import './App.css';
+import { GameSection } from './styles';
+
+const MAX_PARTICIPANTS = 15;
+const participant_lists: string[] = ['tithy', 'shishir', 'ihram'];
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div className="app-container">
         <Header />
         <Questions />
       </div>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GameSection>
+        <Participants name={participant_lists}></Participants>
+        <Wheels
+          maxParticipants={MAX_PARTICIPANTS}
+          listOfParticipants={participant_lists}
+        />
+      </GameSection>
     </>
   );
 }
